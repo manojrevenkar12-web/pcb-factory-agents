@@ -1,0 +1,109 @@
+{
+  "days": 3,
+  "orders_per_day": 70,
+  "time_limit_s": 1.0,
+  "per_day": [
+    {
+      "day": 1,
+      "rule": {
+        "policy": "dispatch rule (ATCS)",
+        "weighted_tardiness": 1353,
+        "on_time": 0.7428571428571429,
+        "rush_on_time": 1.0,
+        "mean_flow_min": 246.88571428571427,
+        "changeovers": 55,
+        "replans": 0,
+        "solve_p95_s": 0.0,
+        "solve_max_s": 0.0,
+        "plan_kept": 0
+      },
+      "cp_sat": {
+        "policy": "CP-SAT replanning",
+        "weighted_tardiness": 1332,
+        "on_time": 0.7428571428571429,
+        "rush_on_time": 1.0,
+        "mean_flow_min": 245.4857142857143,
+        "changeovers": 51,
+        "replans": 71,
+        "solve_p95_s": 1.0323583799981861,
+        "solve_max_s": 1.111168176998035,
+        "plan_kept": 0
+      },
+      "mean_plan_gain_over_rule": 0.00704919536534629,
+      "replans_improving_on_rule": 63
+    },
+    {
+      "day": 2,
+      "rule": {
+        "policy": "dispatch rule (ATCS)",
+        "weighted_tardiness": 153,
+        "on_time": 0.9285714285714286,
+        "rush_on_time": 1.0,
+        "mean_flow_min": 205.61428571428573,
+        "changeovers": 49,
+        "replans": 0,
+        "solve_p95_s": 0.0,
+        "solve_max_s": 0.0,
+        "plan_kept": 0
+      },
+      "cp_sat": {
+        "policy": "CP-SAT replanning",
+        "weighted_tardiness": 162,
+        "on_time": 0.9,
+        "rush_on_time": 1.0,
+        "mean_flow_min": 205.02857142857144,
+        "changeovers": 47,
+        "replans": 75,
+        "solve_p95_s": 1.0688673590011604,
+        "solve_max_s": 1.090278103001765,
+        "plan_kept": 0
+      },
+      "mean_plan_gain_over_rule": 0.015185326430798169,
+      "replans_improving_on_rule": 69
+    },
+    {
+      "day": 3,
+      "rule": {
+        "policy": "dispatch rule (ATCS)",
+        "weighted_tardiness": 2599,
+        "on_time": 0.7,
+        "rush_on_time": 0.8571428571428571,
+        "mean_flow_min": 273.24285714285713,
+        "changeovers": 48,
+        "replans": 0,
+        "solve_p95_s": 0.0,
+        "solve_max_s": 0.0,
+        "plan_kept": 0
+      },
+      "cp_sat": {
+        "policy": "CP-SAT replanning",
+        "weighted_tardiness": 2595,
+        "on_time": 0.7142857142857143,
+        "rush_on_time": 0.8571428571428571,
+        "mean_flow_min": 272.14285714285717,
+        "changeovers": 49,
+        "replans": 74,
+        "solve_p95_s": 1.0720820520000416,
+        "solve_max_s": 1.0920304900027986,
+        "plan_kept": 0
+      },
+      "mean_plan_gain_over_rule": 0.008804710589523895,
+      "replans_improving_on_rule": 61
+    }
+  ],
+  "weighted_tardiness": {
+    "rule": 4105,
+    "cp_sat": 4089
+  },
+  "changeovers": {
+    "rule": 152,
+    "cp_sat": 147
+  },
+  "on_time": {
+    "rule": 0.7904761904761904,
+    "cp_sat": 0.7857142857142857
+  },
+  "replans": 220,
+  "solve_p95_s": 1.0720820520000416,
+  "mean_plan_gain_over_rule": 0.010346410795222786
+}

@@ -1,0 +1,107 @@
+{
+  "replay": {
+    "task": "book-invoice",
+    "judge": "rules",
+    "config": "61fe2df862fadc0c",
+    "cases": 240,
+    "correct": 223,
+    "wrong_actions": 0,
+    "needless_reviews": 17,
+    "automation": 0.9044943820224719,
+    "accuracy": 0.9291666666666667,
+    "cost_per_case_usd": 0.0,
+    "p95_latency_s": 0.27080618100080756,
+    "extra": {
+      "by_case": {
+        "bad_total|ok": 7,
+        "clean|ok": 79,
+        "clean|review": 11,
+        "credit_note|ok": 8,
+        "duplicate_resend|ok": 29,
+        "forwarded|ok": 11,
+        "forwarded|review": 4,
+        "not_invoice|ok": 18,
+        "number_reused|ok": 3,
+        "order_confirmation|ok": 6,
+        "other_suppliers_po|ok": 5,
+        "over_billed|ok": 11,
+        "partial_delivery|ok": 15,
+        "partial_delivery|review": 2,
+        "price_change|ok": 13,
+        "quoted_thread|ok": 3,
+        "unknown_po|ok": 10,
+        "wrong_currency|ok": 5
+      }
+    }
+  },
+  "fault_injection": [
+    {
+      "seed": 1,
+      "answers_corrupted": 49,
+      "wrong_actions": 0,
+      "automation": 0.7584269662921348
+    },
+    {
+      "seed": 2,
+      "answers_corrupted": 36,
+      "wrong_actions": 0,
+      "automation": 0.8258426966292135
+    },
+    {
+      "seed": 3,
+      "answers_corrupted": 42,
+      "wrong_actions": 0,
+      "automation": 0.7471910112359551
+    }
+  ],
+  "shadow": {
+    "emails": 120,
+    "agreement": {
+      "agree": 107,
+      "needless review": 13
+    },
+    "shadow_actions": {
+      "review.create": 37,
+      "erp.book_invoice": 59
+    },
+    "agent_effects_on_erp": 0
+  },
+  "race": {
+    "both_passed_the_agent_check": true,
+    "booked": 1,
+    "sent_to_review": 1,
+    "review_reasons": [
+      "billed for more than received: LM358DR on PO 4500999"
+    ]
+  },
+  "frozen_worker": {
+    "task_status": "done",
+    "fence": 2,
+    "booked_once": true,
+    "bookings": 1,
+    "rescuer_completed": true,
+    "frozen_session_exit": 3,
+    "frozen_session_error": "409 StaleSession: task 1: fence 1 is no longer current"
+  },
+  "crash_test": {
+    "tasks": 66,
+    "sessions_started": 85,
+    "sessions_killed": 6,
+    "crashpoint_exits": 11,
+    "stale_refusals": 0,
+    "abandoned_worker": true,
+    "erp_failures_before": 2,
+    "erp_failures_after": 3,
+    "receipts_replayed": 1,
+    "bookings": 29,
+    "expected_bookings": 29,
+    "duplicate_bookings": 0,
+    "reviews": 20,
+    "expected_reviews": 20,
+    "chase_emails": 6,
+    "expected_chases": 6,
+    "duplicate_emails": 0,
+    "passed": true,
+    "differences": []
+  }
+}

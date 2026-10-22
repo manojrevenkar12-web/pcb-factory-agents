@@ -1,0 +1,147 @@
+{
+  "boards": {
+    "train": 30,
+    "test": 60,
+    "parts_per_board": 60,
+    "defect_rate": 0.04,
+    "defects_in_test": 151
+  },
+  "registration_px": {
+    "mean": 0.16178735406834227,
+    "max": 0.344328259996743
+  },
+  "capture_curve": {
+    "5%": 0.7417218543046358,
+    "10%": 0.9205298013245033,
+    "15%": 0.9271523178807947,
+    "20%": 0.9403973509933775,
+    "30%": 0.9602649006622517,
+    "50%": 0.9933774834437086,
+    "100%": 1.0
+  },
+  "judge_top_20pct": {
+    "fraction_judged": 0.2,
+    "parts_judged_per_board": 12.0,
+    "defects": 151,
+    "caught": 135,
+    "recall": 0.8940397350993378,
+    "false_calls": 10,
+    "false_calls_per_board": 0.16666666666666666,
+    "caught_automatically": 122,
+    "escalated": 122,
+    "escalated_per_board": 2.033333333333333,
+    "defects_among_escalated": 13,
+    "type_correct_of_caught": 0.8222222222222222,
+    "recall_by_type": {
+      "missing": 1.0,
+      "rotated": 0.8333333333333334,
+      "shifted": 1.0,
+      "tombstone": 1.0,
+      "wrong_part": 0.6744186046511628
+    },
+    "model_usd_per_board_if_claude_judges_all_selected": 0.034944,
+    "model_usd_per_board_if_claude_judges_escalations": 0.005921066666666666
+  },
+  "judge_every_part": {
+    "fraction_judged": 1.0,
+    "parts_judged_per_board": 60.0,
+    "defects": 151,
+    "caught": 135,
+    "recall": 0.8940397350993378,
+    "false_calls": 10,
+    "false_calls_per_board": 0.16666666666666666,
+    "caught_automatically": 122,
+    "escalated": 135,
+    "escalated_per_board": 2.25,
+    "defects_among_escalated": 13,
+    "type_correct_of_caught": 0.8222222222222222,
+    "recall_by_type": {
+      "missing": 1.0,
+      "rotated": 0.8333333333333334,
+      "shifted": 1.0,
+      "tombstone": 1.0,
+      "wrong_part": 0.6744186046511628
+    },
+    "model_usd_per_board_if_claude_judges_all_selected": 0.17472000000000001,
+    "model_usd_per_board_if_claude_judges_escalations": 0.0065520000000000005
+  },
+  "thresholds": {
+    "missing_margin": 0.05,
+    "rotation_margin": 0.08,
+    "shift_mm": 0.18,
+    "wrong_z": 8.0,
+    "unsure_z": 3.5
+  },
+  "ranker": {
+    "features": [
+      "1 - ncc_golden",
+      "1 - ncc_body",
+      "ncc_bare - ncc_golden",
+      "rotation_gain",
+      "shift_mm",
+      "body_chroma",
+      "|body_light|"
+    ],
+    "intercept": -1.6058615956494333,
+    "weights": {
+      "1 - ncc_golden": 0.6009596823532135,
+      "1 - ncc_body": 1.8117798468654138,
+      "ncc_bare - ncc_golden": 0.540874620137253,
+      "rotation_gain": 0.11750717165375374,
+      "shift_mm": 0.3183069569416674,
+      "body_chroma": 0.19793476953311845,
+      "|body_light|": 0.6819106921083319
+    },
+    "mean": [
+      0.8800904272241833,
+      1.456210349086386,
+      0.6788486215119515,
+      0.02409198797411389,
+      0.3115556541833909,
+      0.4053701992580829,
+      0.5051451031694871
+    ],
+    "std": [
+      4.20647279204096,
+      7.208921014399921,
+      3.874396531107069,
+      0.5313051955599014,
+      0.8940519869495488,
+      2.108426029966008,
+      2.756105679595058
+    ]
+  },
+  "cost": {
+    "per_part": {
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 1156,
+      "output_tokens": 60,
+      "usd": 0.002912
+    },
+    "whole_board_image_tokens": 1800
+  },
+  "deeppcb": {
+    "naive": {
+      "pairs": 500,
+      "defects": 3140,
+      "candidates_per_image": 30.71,
+      "recall_iou_0.33": 0.09968152866242039,
+      "recall_centre": 0.9089171974522293,
+      "precision": 0.15675675675675677,
+      "f_score": 0.2673968177045473,
+      "share_of_image_flagged": 0.7491942919921869,
+      "polarity_accuracy": 0.6019621583742116
+    },
+    "aligned": {
+      "pairs": 500,
+      "defects": 3140,
+      "candidates_per_image": 13.81,
+      "recall_iou_0.33": 0.19585987261146498,
+      "recall_centre": 0.9777070063694268,
+      "precision": 0.4389572773352643,
+      "f_score": 0.605890344641452,
+      "share_of_image_flagged": 0.04430641113281247,
+      "polarity_accuracy": 0.9778501628664495
+    }
+  }
+}

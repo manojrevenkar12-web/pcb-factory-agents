@@ -1,0 +1,43 @@
+{
+  "judge": "rules",
+  "parts": 9833,
+  "library_entries_flagged_by_pin_check": 566,
+  "library_flag_examples": [
+    "IR4302 (Amplifier_Audio): symbol has 31 pins, footprint has 27 numbered pads, Package_DFN_QFN:Infineon_PQFN-44-31-5EP_7x7mm_P0.5mm",
+    "IR4312 (Amplifier_Audio): symbol has 31 pins, footprint has 27 numbered pads, Package_DFN_QFN:Infineon_PQFN-44-31-5EP_7x7mm_P0.5mm",
+    "IR4322 (Amplifier_Audio): symbol has 31 pins, footprint has 27 numbered pads, Package_DFN_QFN:Infineon_PQFN-44-31-5EP_7x7mm_P0.5mm",
+    "LM4950TA (Amplifier_Audio): symbol has 9 pins, footprint has 5 numbered pads, Package_TO_SOT_THT:TO-220-5_P3.4x3.7mm_StaggerOdd_Lead3.8mm_Vertical",
+    "LM4990ITL (Amplifier_Audio): symbol has 10 pins, footprint has 9 numbered pads, Package_BGA:Texas_DSBGA-9_1.4715x1.4715mm_Layout3x3_P0.5mm"
+  ],
+  "consistent_parts": 9267,
+  "designs_with_injected_errors": 1029,
+  "injected_caught": {
+    "subtle": "170/170",
+    "pins": "391/392",
+    "family": "467/467"
+  },
+  "injected_caught_rate": 0.9990281827016521,
+  "wrong_designs_programmed": 1,
+  "correct_designs_programmed": 2966,
+  "automation": 0.3600388443797038,
+  "why_correct_designs_went_to_a_person": {
+    "2 land patterns fit; body size and pitch needed ": 867,
+    "package not read": 758,
+    "3 land patterns fit; body size and pitch needed ": 707,
+    "9 land patterns fit; body size and pitch needed ": 622,
+    "4 land patterns fit; body size and pitch needed ": 419,
+    "5 land patterns fit; body size and pitch needed ": 251
+  },
+  "judge_cost_usd": 0.0,
+  "fault_injection": {
+    "judge": "noisy(rules, 20%)",
+    "injected_caught": {
+      "subtle": "170/170",
+      "pins": "391/392",
+      "family": "467/467"
+    },
+    "injected_caught_rate": 0.9990281827016521,
+    "wrong_designs_programmed": 1,
+    "automation": 0.3117261471230881
+  }
+}
