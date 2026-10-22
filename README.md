@@ -31,8 +31,8 @@ that makes every change), **classical first, model second**, and **safe by const
 
 ## What the evaluations show
 
-Every number below comes from `pfa all` and is recomputed in CI on each push
-([reports/](reports)). The judges here are the free, deterministic baselines (rules and classical vision);
+Every number below comes from `pfa all` ([reports/](reports)). CI recomputes all of it on each push,
+with a shorter crash test (30 emails) and one simulated day of replanning, and fails if the gate does. The judges here are the free, deterministic baselines (rules and classical vision);
 the same harness runs Claude as the judge (see [Claude as the judge](#claude-as-the-judge)).
 
 | Agent | Tested on | Result |
@@ -186,7 +186,7 @@ so every result above is for the rule and classical baselines.
 ```bash
 pip install -e ".[dev,llm,mcp]"
 export PFA_DATABASE_URL=postgresql://postgres@localhost:5432/pfa   # any PostgreSQL 14+
-pfa all            # ~15 min: every evaluation, then the gate
+pfa all            # 5-15 min: every evaluation, then the gate
 pfa claude         # with ANTHROPIC_API_KEY: the back-office replay with Claude
 PFA_TEST_DATABASE_URL=postgresql://postgres@localhost:5432/pfa_test pytest -q
 ```
